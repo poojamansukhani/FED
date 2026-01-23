@@ -16,8 +16,11 @@ const data = [
 ]
 const Accordion = () => {
     return(
-        <div>
-            <AccordionItem title={data[0].title} body={data[0].description}/>
+        <div className="w-[50%] m-auto">
+            {data.map((accordion)=>{
+                return (<AccordionItem title={accordion.title} body={accordion.description}/>)
+            })}
+            
         </div>
     )
 }
